@@ -30,6 +30,13 @@ def exibir_opcoes():
     print('4 - Sair\n')
 
 
+def voltar_ao_menu():
+    
+    input('\nDigite uma tecla para voltar ao menu ')
+    
+    main()
+
+
 def cadastrar_novo_restaurante():
     
     os.system('cls')
@@ -42,9 +49,8 @@ def cadastrar_novo_restaurante():
     
     print(f'\n\x1b[6;30;42m✔ O restaurante "{nome_restaurante}" foi adicionado com sucesso!\x1b[0m')
     
-    input('\nDigite uma tecla para voltar ao menu ')
+    voltar_ao_menu()
     
-    main()
 
 def listar_restaurantes():
     
@@ -56,9 +62,8 @@ def listar_restaurantes():
         
         print(f'☉ {restaurante}')
     
-    input('\nDigite uma tecla para voltar ao menu ')
+    voltar_ao_menu()
     
-    main()
 
 def escolher_opcao():
 
@@ -92,9 +97,11 @@ def escolher_opcao():
 
 def opcao_invalida():
     
-    print('Opção inválida!\n')
-    input('Digite uma tecla pra voltar ao menu principal ')
-    main()
+    os.system('cls')
+    
+    print('\x1b[5;30;41m✘ Opção inválida!\x1b[0m\n')
+    
+    voltar_ao_menu()
 
 def main():
     
