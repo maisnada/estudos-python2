@@ -34,15 +34,29 @@ def cadastrar_novo_restaurante():
     
     os.system('cls')
     
-    print('Cadastro de novos restaurantes')
+    print('▷ Cadastro de novos restaurantes ◁\n')
 
-    nome_restaurante = input('Deigite o nome do restaurante: ')
+    nome_restaurante = input('Digite o nome do restaurante: ')
     
     restaurantes.append(nome_restaurante)
     
-    print(f'\nO restaurante {nome_restaurante} foi adicionado com sucesso!\n ')
+    print(f'\n\x1b[6;30;42m✔ O restaurante "{nome_restaurante}" foi adicionado com sucesso!\x1b[0m')
     
-    input('Digite uma tecla para voltar ao menu ')
+    input('\nDigite uma tecla para voltar ao menu ')
+    
+    main()
+
+def listar_restaurantes():
+    
+    os.system('cls')
+    
+    print('▷ Listar restaurantes ◁\n')
+    
+    for restaurante in restaurantes:
+        
+        print(f'☉ {restaurante}')
+    
+    input('\nDigite uma tecla para voltar ao menu ')
     
     main()
 
@@ -58,7 +72,7 @@ def escolher_opcao():
             
         elif opcao_escolhida == 2:
             
-            print('Listar restaurantes')
+            listar_restaurantes()
 
         elif opcao_escolhida == 3:
             
