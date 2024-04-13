@@ -29,7 +29,13 @@ def exibir_opcoes():
     print('3 - Ativar restaurante')
     print('4 - Sair\n')
 
-
+def exibir_titulo(titulo):
+    
+    os.system('cls')
+    
+    print(f'▷ {titulo} ◁\n')
+    
+    
 def voltar_ao_menu():
     
     input('\nDigite uma tecla para voltar ao menu ')
@@ -39,10 +45,8 @@ def voltar_ao_menu():
 
 def cadastrar_novo_restaurante():
     
-    os.system('cls')
+    exibir_titulo('Cadastrar novo restaurante')
     
-    print('▷ Cadastro de novos restaurantes ◁\n')
-
     nome_restaurante = input('Digite o nome do restaurante: ')
     
     restaurantes.append(nome_restaurante)
@@ -54,9 +58,7 @@ def cadastrar_novo_restaurante():
 
 def listar_restaurantes():
     
-    os.system('cls')
-    
-    print('▷ Listar restaurantes ◁\n')
+    exibir_titulo('Listar restaurantes')
     
     for restaurante in restaurantes:
         
