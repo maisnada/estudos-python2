@@ -4,9 +4,7 @@ restaurantes = []
 
 def finalizar_app():
     
-    os.system('cls')
-    
-    print('Finalizando o app ^.^\n')
+    exibir_titulo('Finalizando o app ^.^')
 
 
 def exibir_nome_programa():
@@ -33,7 +31,7 @@ def exibir_titulo(titulo):
     
     os.system('cls')
     
-    print(f'▷ {titulo} ◁\n')
+    print(f'▷ {titulo}\n')
     
     
 def voltar_ao_menu():

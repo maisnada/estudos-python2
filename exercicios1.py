@@ -2,12 +2,14 @@
 
 print('Python na Escola de Progrmação XYZ')
 
+
 #Imprima a frase: Meu nome é {nome} e tenho {idade} anos em que nome e idade precisam ser valores armazenados em variáveis.
 
 nome = 'Marcelo'
 idade = '36'
 
 print(f'Meu nome é {nome} e tenho {idade} anos')
+
 
 #Imprima a palavra: 'ALURA' de modo que cada letra fique em uma linha, como mostrado a seguir:
 
@@ -26,6 +28,7 @@ if numero % 2 == 0:
 
 else:
     print(f'\nO número {numero} é impar')
+
 
 #Pergunte ao usuário sua idade e, com base nisso, use uma estrutura if elif else para classificar a idade em categorias de acordo com as seguintes condições:
 
@@ -47,9 +50,24 @@ else:
     
     print('\nAdulto')
 
+
 #Solicite um nome de usuário e uma senha e use uma estrutura if else para verificar se o nome de usuário e a senha fornecidos correspondem aos valores esperados determinados por você.
 
+usuario = input('\nDigite seu usuário: ')
+
+senha = input('\nDigite sua senha: ')
+
+if usuario == 'marcelo' and senha == '123456':
+    
+    print('\nAcesso permitido!')
+    
+else:
+    
+    print('\nAcesso negado! Tente novamente.')
+
+
 #Solicite ao usuário as coordenadas (x, y) de um ponto qualquer e utilize uma estrutura if elif else para determinar em qual quadrante do plano cartesiano o ponto se encontra de acordo com as seguintes condições:
+
 
 #Primeiro Quadrante: os valores de x e y devem ser maiores que zero;
 #Segundo Quadrante: o valor de x é menor que zero e o valor de y é maior que zero;
