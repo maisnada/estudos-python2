@@ -46,8 +46,11 @@ def cadastrar_novo_restaurante():
     exibir_titulo('Cadastrar novo restaurante')
     
     nome_restaurante = input('Digite o nome do restaurante: ')
+    categoria_restaurante = input('\nDigte a categoria: ')    
     
-    restaurantes.append(nome_restaurante)
+    restaurante = {'nome': nome_restaurante, 'categoria': categoria_restaurante, 'status': False}
+    
+    restaurantes.append(restaurante)
     
     print(f'\n\x1b[6;30;42m✔ O restaurante "{nome_restaurante}" foi adicionado com sucesso!\x1b[0m')
     
@@ -58,19 +61,24 @@ def listar_restaurantes():
     
     exibir_titulo('Listar restaurantes')
     
-    for restaurante in restaurantes:
-        
-        print(f'☉ {restaurante}')
+    if len(restaurantes) > 0:
     
+        for restaurante in restaurantes:
+            
+            print(f'☉ {restaurante['nome']} | {restaurante['categoria']} | {restaurante['status']}')
+    
+    else:
+        print('Lista vazia!')
+        
     voltar_ao_menu()
     
 
 def escolher_opcao():
-
+  
     try:
 
-        opcao_escolhida = int(input('Escolha uma opção: '))
-
+        opcao_escolhida = int(input('Escolha uma opção: ').strip())
+      
         if opcao_escolhida == 1:
             
             cadastrar_novo_restaurante()
@@ -91,7 +99,9 @@ def escolher_opcao():
             
             opcao_invalida()
             
-    except:
+    except Exception as e:
+        
+        #print(e)
         
         opcao_invalida()
 
