@@ -63,13 +63,13 @@ def listar_restaurantes():
     
     if len(restaurantes) > 0:
     
-        print(f'{'Nome restaurante'.ljust(20)} | {'Categoria'.ljust(20)}' | {'Status'})
+        print(f'{'Nome restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Status')
     
         for restaurante in restaurantes:
             
             status = 'Ativado' if restaurante['status'] else 'Desativado'
-                        
-            print(f'☉ {restaurante['nome'].ljust(20)} | {restaurante['categoria'].ljust(20)} | {status}')
+             
+            print(f'> {restaurante['nome'].ljust(20)} | {restaurante['categoria'].ljust(20)} | {status}')
     
     else:
         print('Lista vazia!')
@@ -91,9 +91,9 @@ def alternar_status_restaurante():
             
             restaurante_encontrado = True
             
-            restaurante['status'] = not restaurante['status']
+            restaurante['status'] = not restaurante['status']            
             
-            mensagem = f'\nRestaurante {restaurante['nome']} ativo!' if restaurante['status'] == True else f'\nRestaurante {restaurante['nome']} desativado!'
+            mensagem = f'Restaurante {restaurante['nome']} ativo!' if restaurante['status'] == True else f'Restaurante {restaurante['nome']} desativado!'
     
             print(mensagem)
     
@@ -133,9 +133,9 @@ def escolher_opcao():
             
     except Exception as e:
         
-        #print(e)
+        print(e)
         
-        opcao_invalida()
+        #opcao_invalida()
 
 def opcao_invalida():
     
