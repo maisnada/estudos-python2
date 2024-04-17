@@ -42,6 +42,18 @@ def voltar_ao_menu():
 
 
 def cadastrar_novo_restaurante():
+    '''
+    Docstring
+    Essa função adiciona um novo restaurante
+    
+    Inputs:
+    - Nome do restaurante
+    - Categoria
+    
+    Outputs:
+    - Adiciona um novo restaurante a lista de restaurantes
+        
+    '''
     
     exibir_titulo('Cadastrar novo restaurante')
     
